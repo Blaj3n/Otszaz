@@ -22,3 +22,4 @@ szamlalo = 0
 for egykosar in targyak:
     szamlalo += 1
 print(f"A fizetések száma: {szamlalo}")
+
