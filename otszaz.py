@@ -23,3 +23,9 @@ for egykosar in targyak:
     szamlalo += 1
 print(f"A fizetések száma: {szamlalo}")
 
+print("\n3. feladat")
+elso_vasarlo = len(targyak[0])
+print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
+# print(targyak[0].items())
+# print(targyak[0].keys())
+# print(targyak[0].values())
