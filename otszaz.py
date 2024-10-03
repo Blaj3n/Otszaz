@@ -1,0 +1,17 @@
+# print("1. feladat")
+targyak = []
+kosar = {}
+
+with open("penztar.txt", "r", encoding="utf-8") as file:
+    for egysor in file:
+        if egysor.strip() != "F":
+            if egysor.strip() not in kosar:     # egysor.strip() = "toll"
+                kosar[egysor.strip()] = 1
+            else:
+                kosar[egysor.strip()] += 1
+        elif egysor.strip() == "F":
+            targyak.append(kosar)
+            kosar = {}
+print(targyak)
+
+print("")
