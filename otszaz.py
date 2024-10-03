@@ -15,10 +15,3 @@ with open("penztar.txt", "r", encoding="utf-8") as file:
 print(targyak)
 
 print("")
-
-print("2. feladat")
-
-szamlalo = 0
-for egykosar in targyak:
-    szamlalo += 1
-print(f"A fizetések száma: {szamlalo}")
