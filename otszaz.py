@@ -44,7 +44,7 @@ for kosar in targyak:
     for elem in kosar:
         if arucikk == elem:
             szamlalo += 1
-print(szamlalo)
+# print(szamlalo)
 
 szamolo = 1
 for kosar in targyak:
@@ -52,8 +52,16 @@ for kosar in targyak:
         szamolo += 1
     else:
         print(f"Az első vásárlás sorszáma: {szamolo} ")
-        break 
+        break
 
+counter = len(targyak) # 141
+for i in range((len(targyak)) - 1, 0, -1): # 140 ---> 1
+    if arucikk not in targyak[i]: # 1. eset: a kefe NINCS BENNE a targyak[140]?
+        counter -= 1
+    else:
+        print(f"Az utolsó vásárlás sorszáma: {counter} ")
+        break
 
-print("Az utolsó vásárlás sorszáma:")
 print(f"{szamlalo} vásárlás során vettek belőle.")
+
+# HF 6.
