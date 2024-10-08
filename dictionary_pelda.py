@@ -18,3 +18,6 @@ for egyelem in kosarak.items():     # végigjárjuk a kosarak nevű dict. adatai
     if i < 2:
         print(f"{egyelem[0]}: {egyelem[1]}")    # egyelem = (key: value)
         i += 1
+
+for egyelem in kosarak.items():     # végigjárjuk a kosarak nevű dict. adatait
+    print(egyelem)
