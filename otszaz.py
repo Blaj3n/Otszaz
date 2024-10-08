@@ -52,7 +52,7 @@ for kosar in targyak:
         szamolo += 1
     else:
         print(f"Az első vásárlás sorszáma: {szamolo} ")
-        break
+        break 
 
 
 print("Az utolsó vásárlás sorszáma:")
