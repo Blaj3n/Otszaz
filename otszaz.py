@@ -33,9 +33,9 @@ print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
 # print(targyak[0].values())
 
 print("\n4. feladat")
-sorszam = 2 #int(input("Adja meg egy vásárlás sorszámát! "))
-arucikk = "kefe" #input("Adja meg egy árucikk nevét! ")
-darabszam = 2 #int(input("Adja meg a vásárolt darabszámot! "))
+sorszam = int(input("Adja meg egy vásárlás sorszámát! "))
+arucikk = input("Adja meg egy árucikk nevét! ")
+darabszam = int(input("Adja meg a vásárolt darabszámot! "))
 
 print("\n5. feladat")
 
@@ -64,4 +64,10 @@ for i in range((len(targyak)) - 1, 0, -1): # 140 ---> 1
 
 print(f"{szamlalo} vásárlás során vettek belőle.")
 
-# HF 6.
+# HF
+
+print("\n7. feladat")
+
+for kosar in targyak[sorszam - 1].items():
+    print(kosar)
+    # HF kiírás megcsinálása, növekvő sorrendben
