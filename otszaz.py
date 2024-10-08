@@ -33,8 +33,27 @@ print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
 # print(targyak[0].values())
 
 print("\n4. feladat")
-sorszam = int(input("Adja meg egy vásárlás sorszámát! "))
-arucikk = input("Adja meg egy árucikk nevét! ")
-darabszam = int(input("Adja meg a vásárolt darabszámot! "))
+sorszam = 2 #int(input("Adja meg egy vásárlás sorszámát! "))
+arucikk = "kefe" #input("Adja meg egy árucikk nevét! ")
+darabszam = 2 #int(input("Adja meg a vásárolt darabszámot! "))
+
+print("\n5. feladat")
+
+szamlalo = 0
+for kosar in targyak:
+    for elem in kosar:
+        if arucikk == elem:
+            szamlalo += 1
+print(szamlalo)
+
+szamolo = 1
+for kosar in targyak:
+    if arucikk not in kosar:
+        szamolo += 1
+    else:
+        print(f"Az első vásárlás sorszáma: {szamolo} ")
+        break
 
 
+print("Az utolsó vásárlás sorszáma:")
+print(f"{szamlalo} vásárlás során vettek belőle.")
