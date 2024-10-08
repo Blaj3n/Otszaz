@@ -24,8 +24,15 @@ for egykosar in targyak:
 print(f"A fizetések száma: {szamlalo}")
 
 print("\n3. feladat")
-elso_vasarlo = len(targyak[0])
+elso_vasarlo = 0
+for cikk in targyak[0].values():
+    elso_vasarlo += cikk
 print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
 # print(targyak[0].items())
 # print(targyak[0].keys())
 # print(targyak[0].values())
+
+print("\n4. feladat")
+sorszam = int(input("Adja meg egy vásárlás sorszámát! "))
+arucikk = input("Adja meg egy árucikk nevét! ")
+darabszam = int(input("Adja meg a vásárolt darabszámot! "))
