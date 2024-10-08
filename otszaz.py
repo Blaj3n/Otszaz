@@ -36,3 +36,5 @@ print("\n4. feladat")
 sorszam = int(input("Adja meg egy vásárlás sorszámát! "))
 arucikk = input("Adja meg egy árucikk nevét! ")
 darabszam = int(input("Adja meg a vásárolt darabszámot! "))
+
+
