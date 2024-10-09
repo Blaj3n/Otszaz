@@ -33,9 +33,9 @@ print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
 # print(targyak[0].values())
 
 print("\n4. feladat")
-sorszam = int(input("Adja meg egy vásárlás sorszámát! "))
-arucikk = input("Adja meg egy árucikk nevét! ")
-darabszam = int(input("Adja meg a vásárolt darabszámot! "))
+sorszam = 2#int(input("Adja meg egy vásárlás sorszámát! "))
+arucikk = "kefe"#input("Adja meg egy árucikk nevét! ")
+darabszam = 2#int(input("Adja meg a vásárolt darabszámot! "))
 
 print("\n5. feladat")
 
@@ -54,9 +54,9 @@ for kosar in targyak:
         print(f"Az első vásárlás sorszáma: {szamolo} ")
         break
 
-counter = len(targyak) # 141
-for i in range((len(targyak)) - 1, 0, -1): # 140 ---> 1
-    if arucikk not in targyak[i]: # 1. eset: a kefe NINCS BENNE a targyak[140]?
+counter = len(targyak)  # 141
+for i in range((len(targyak)) - 1, 0, -1):  # 140 ---> 1
+    if arucikk not in targyak[i]:   # 1. eset: a kefe NINCS BENNE a targyak[140]?
         counter -= 1
     else:
         print(f"Az utolsó vásárlás sorszáma: {counter} ")
@@ -64,7 +64,30 @@ for i in range((len(targyak)) - 1, 0, -1): # 140 ---> 1
 
 print(f"{szamlalo} vásárlás során vettek belőle.")
 
-# HF
+print("\n6. feladat")
+
+
+# minden arucikk = 500, arucikk > 1 = 450 arucikk > 2 = 400
+def ertek(darabszam: int):
+    ar1 = 500
+    ar2 = 450
+    ar3 = 400
+    if darabszam <= 0:
+        return 0
+    elif darabszam == 1:
+        return ar1
+    elif darabszam == 2:
+        return ar1 + ar2
+    else:  #darabszam >= 3
+        return ar1 + ar2 + (darabszam - 2) * ar3
+
+print(f"{darabszam} darab vételekor fizetendő: {ertek(darabszam)}")
+
+
+# # Példa a függvény használatára
+# print(ertek(2))  # 950
+# print(ertek(3))  # 1350
+# print(ertek(5))  # 1850
 
 print("\n7. feladat")
 

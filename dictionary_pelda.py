@@ -8,7 +8,8 @@ kosarak = {
 
 # print(type(kosarak))
 print(kosarak["db"])
-kosarak["nev"] = "Bence"    # hozzáadja kosarak dictionary-hez a nev key-t és a hozzátartozó value-t, Lásd.: listánál az append.
+kosarak["nev"] = "Bence"    # hozzáadja kosarak dictionary-hez a nev key-t és a hozzátartozó value-t,
+# Lásd.: listánál az append.
 print(kosarak.keys())       # visszaadja a dictionary kulcsait
 print(kosarak.values())     # visszaadja a dictionary értékeit
 print(kosarak.items())      # ezek az adott kosár kulcsai [0], és értékei [1]
