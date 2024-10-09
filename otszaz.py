@@ -92,5 +92,5 @@ print(f"{darabszam} darab vételekor fizetendő: {ertek(darabszam)}")
 print("\n7. feladat")
 
 for kosar in targyak[sorszam - 1].items():
-    print(kosar)
+    print(str(kosar[1]) + " ", kosar[0])
     # HF kiírás megcsinálása, növekvő sorrendben
