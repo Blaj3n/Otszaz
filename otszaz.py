@@ -33,9 +33,9 @@ print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
 # print(targyak[0].values())
 
 print("\n4. feladat")
-sorszam = 2#int(input("Adja meg egy vásárlás sorszámát! "))
-arucikk = "kefe"#input("Adja meg egy árucikk nevét! ")
-darabszam = 2#int(input("Adja meg a vásárolt darabszámot! "))
+sorszam = 2         # int(input("Adja meg egy vásárlás sorszámát! "))
+arucikk = "kefe"    # input("Adja meg egy árucikk nevét! ")
+darabszam = 2       # int(input("Adja meg a vásárolt darabszámot! "))
 
 print("\n5. feladat")
 
@@ -81,16 +81,37 @@ def ertek(darabszam: int):
     else:  #darabszam >= 3
         return ar1 + ar2 + (darabszam - 2) * ar3
 
+
 print(f"{darabszam} darab vételekor fizetendő: {ertek(darabszam)}")
 
-
-# # Példa a függvény használatára
-# print(ertek(2))  # 950
-# print(ertek(3))  # 1350
-# print(ertek(5))  # 1850
 
 print("\n7. feladat")
 
 for kosar in targyak[sorszam - 1].items():
     print(str(kosar[1]) + " ", kosar[0])
     # HF kiírás megcsinálása, növekvő sorrendben
+
+print("\n8. feladat")
+
+print(ertek(2))
+with open("osszeg.txt", "w", encoding="utf-8") as fajl:
+    osszeg = 0
+    for i in range(0, len(targyak)): # 0 ... 141 - 1
+        for egyelem in targyak[i].values():
+            osszeg += ertek(egyelem)
+        fajl.write(f"{i + 1}: {osszeg}\n")
+        osszeg = 0
+print("Az osszeg.txt fájl sikeresen elkészült. ")
+
+print(targyak[1].values())
+
+# HF TAKARÍTÁS
+"""
+1: 500 
+2: 3900 
+3: 2300 
+4: 1000 
+5: 2500 
+6: 2900 
+7: 950
+"""
