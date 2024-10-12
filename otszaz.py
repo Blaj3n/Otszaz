@@ -12,7 +12,7 @@ with open("penztar.txt", "r", encoding="utf-8") as file:
         elif egysor.strip() == "F":
             targyak.append(kosar)
             kosar = {}
-print(targyak)
+# print(targyak)
 
 print("")
 
@@ -33,9 +33,9 @@ print(f"Az első vásárló {elso_vasarlo} darab árucikket vásárolt.")
 # print(targyak[0].values())
 
 print("\n4. feladat")
-sorszam = 2         # int(input("Adja meg egy vásárlás sorszámát! "))
-arucikk = "kefe"    # input("Adja meg egy árucikk nevét! ")
-darabszam = 2       # int(input("Adja meg a vásárolt darabszámot! "))
+sorszam = int(input("Adja meg egy vásárlás sorszámát! "))
+arucikk = input("Adja meg egy árucikk nevét! ")
+darabszam = int(input("Adja meg a vásárolt darabszámot! "))
 
 print("\n5. feladat")
 
@@ -91,9 +91,9 @@ for kosar in targyak[sorszam - 1].items():
     print(str(kosar[1]) + " ", kosar[0])
     # HF kiírás megcsinálása, növekvő sorrendben
 
-print("\n8. feladat")
+# print("\n8. feladat")
 
-print(ertek(2))
+# print(ertek(2))
 with open("osszeg.txt", "w", encoding="utf-8") as fajl:
     osszeg = 0
     for i in range(0, len(targyak)): # 0 ... 141 - 1
@@ -101,11 +101,10 @@ with open("osszeg.txt", "w", encoding="utf-8") as fajl:
             osszeg += ertek(egyelem)
         fajl.write(f"{i + 1}: {osszeg}\n")
         osszeg = 0
-print("Az osszeg.txt fájl sikeresen elkészült. ")
+# print("Az osszeg.txt fájl sikeresen elkészült. ")
 
-print(targyak[1].values())
+# print(targyak[1].values())
 
-# HF TAKARÍTÁS
 """
 1: 500 
 2: 3900 
